@@ -1,0 +1,222 @@
+
+.loadingbar{
+  margin:0;
+  background-color:#41c0bf;
+  position:fixed;
+  top:0;
+  width:100%;
+  height:5px;
+
+}
+.header-menu {
+width: 100%;
+background-color: grey;
+margin-top:5px;
+padding: 21px;
+
+}
+
+.header-menu ul {
+margin: 0;
+width:100%;
+}
+
+.header-menu li {
+
+  list-style: none;
+  display: inline;
+  text-align:center;
+  position: relative;
+
+}
+.bottom-square{
+  width: 700px;
+  height:700px;
+  transform: rotate(45deg);
+  border-radius: 15%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  background-color: black;
+
+}
+.header-menu a{
+  display: inline-block;
+  padding: 10px;
+  background-color: #41c0bf;
+  text-decoration: none;
+  width: 75px;
+  color: white;
+
+}
+.left-ghost{
+  position: relative;
+float: left;
+ width:15%;
+ height:100vh;
+
+}
+.left{
+  position:fixed;
+  width:15%;
+
+
+  height:100%;
+  background-color: #41c0bf
+
+
+}
+
+.left a{
+  display: block;
+  background-color: #41C0BF;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  padding: 20px 5px;
+  margin: 5px 0px;
+
+}
+.left a:hover{
+
+  background-color: white;
+  text-decoration: underline;
+  color: #41C0BF;
+
+
+}
+.left ul {
+  margin-top: 50px;
+  text-align: center;
+    padding: 0;
+    width: 15%;
+    background-color: #41C0BF;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+.main{
+
+  margin-left: 15%;
+
+
+
+
+}
+.main h1 {
+
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 40px;
+  color: #525252;
+  margin-top: 20px;
+  margin-bottom: 0px;
+
+
+
+
+
+}
+body{
+  margin:0;
+  padding-top:0px;
+
+
+}
+.line{
+
+  padding-top: 60px;
+  padding-left: 100px;
+}
+/*This is the css for controlling the logo colors*/
+#logo-top{
+  fill: #41c0bf;
+  animation-name: logo-top;
+  animation-duration: 4s;
+}
+#logo-bot{
+  fill:#FFFFFF;
+}
+#logo-stroke{
+  stroke: #525252;
+  stroke-width: 13.6338;
+  stroke-miterlimit:10;
+  fill: none;
+  animation-name: logo-stroke;
+  animation-duration: 4s;
+}
+/*
+@keyframes logo-top {
+    0s {fill: red;}
+      {fill: yellow;left:200px; top:0px;}
+    50%  {fill: blue;}
+    100% {fill: green;}
+}
+@keyframes logo-stroke{
+
+  0% {}
+  25%  {}
+  50%  {}
+  100% {}
+
+}
+*/
+
+.button{
+  display: inline-block;
+}
+.button a{
+  display: inline-block;
+  border:solid #41c0bf 5px;
+  text-decoration: none;
+  padding: 12px 10px ;
+
+  color: #41c0bf;
+  text-align: center;
+  font-size: 15px;
+  font-family: Montserrat;
+  margin-right: 15px;
+}
+.button a:hover{
+  border:solid #41c0bf 5px;
+  background-color: #41c0bf;
+  text-decoration: none;
+  padding: 12px 10px ;
+  color: white;
+}
+
+.com{
+  display: inline-block;
+  border:solid #41c0bf 5px;
+  text-decoration: none;
+  padding: 12px 10px ;
+  background-color: #41C0BF;
+
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  font-family: Montserrat;
+  margin-right: 15px;
+}
+.com:hover{
+  opacity: 0.7;
+}
+.illust{
+  float:right;
+  padding-right: 25px;
+  padding-top: 55px;
+}
+.sub {
+
+  font-family:sans-serif;
+  font-size: 20px;
+  padding-top: px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: 300;
+  color:#525252;
+  line-height: 30px;
+  opacity: 0.5;
+
+}
