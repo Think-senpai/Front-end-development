@@ -1,0 +1,301 @@
+
+.loadingbar{
+  margin:0;
+  background-color:#41c0bf;
+  position:fixed;
+  top:0;
+  width:100%;
+  height:5px;
+
+}
+.header-menu {
+width: 100%;
+background-color: grey;
+margin-top:5px;
+padding: 21px;
+
+}
+
+.header-menu ul {
+margin: 0;
+width:100%;
+}
+
+.header-menu li {
+
+  list-style: none;
+  display: inline;
+  text-align:center;
+  position: relative;
+
+}
+.bottom-square{
+  width: 700px;
+  height:700px;
+  transform: rotate(45deg);
+  border-radius: 15%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  background-color: black;
+
+}
+.header-menu a{
+  display: inline-block;
+  padding: 10px;
+  background-color: #41c0bf;
+  text-decoration: none;
+  width: 75px;
+  color: white;
+
+}
+.left-ghost{
+  position: relative;
+float: left;
+ width:15%;
+ height:100vh;
+
+}
+.left{
+  position:fixed;
+  width:15%;
+
+
+  height:100%;
+  background-color: #41c0bf;
+
+
+}
+.active{
+  display: block;
+  text-decoration: none;
+  color: #41C0BF;
+  cursor: pointer;
+  padding: 15px 5px;
+  font-family: sans-serif;
+  font-size: 20px;
+  background-color: white;
+  margin: 15px;
+  margin-right: 0;
+
+}
+
+.passive{
+  display: block;
+  text-decoration: none;
+  color: #41C0BF;
+  cursor: pointer;
+  padding: 15px 5px;
+  font-family: sans-serif;
+  font-size: 20px;
+  background-color: white;
+  margin: 15px;
+}
+
+.passive:hover{
+
+  background-color: white;
+  margin-right:  0;
+  color: #41C0BF;
+
+
+
+}
+
+.left ul {
+  margin-top: 60px;
+  text-align: center;
+    padding: 0;
+    width: 15%;
+    background-color: #41C0BF;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.menu-fotter{
+  width: 15%;
+      background-color: #af68c1;
+  position: fixed;
+  bottom: 0;
+  height: 65px;
+}
+
+.em-heart{
+  font-size: 12px;
+
+}
+p.fott{
+  font-family: sans-serif;
+  font-size: 11px;
+  text-align: center;
+  padding: 20px 15px;
+  padding-left: 5px;
+  font-weight:bold;
+  color: white;
+  line-height: 17px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+.main{
+
+  margin-left: 15%;
+ background-image:
+
+
+
+}
+.main h1 {
+
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 40px;
+  color: #525252;
+  margin-top: 20px;
+  margin-bottom: 0px;
+
+
+
+
+
+}
+body{
+  margin:0;
+  padding-top:0px;
+
+
+}
+.line{
+
+  padding-top: 60px;
+  padding-left: 100px;
+}
+/*This is the css for animating the illustration*/
+.eye{
+  animation-name: eye;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+
+
+}
+#logo-bot{
+  fill:#FFFFFF;
+}
+#logo-stroke{
+  stroke: #525252;
+  stroke-width: 13.6338;
+  stroke-miterlimit:10;
+  fill: none;
+  animation-name: logo-stroke;
+  animation-duration: 4s;
+
+}
+
+@keyframes eye{
+    0% {transform:translateX(0px)  }
+    25% {transform: translateX(3.5px) ; }
+    50% {transform: translateX(0px) ;}
+    100% {transform: translateX(-3.5px) ;}
+}
+
+#logo-top{
+  animation:logo-top;
+  animation-duration: 8s;
+  fill:white;
+  animation-fill-mode: forwards;
+
+
+}
+
+@keyframes logo-top {
+  66%{fill:white}
+  67%{fill:#41C0BF}
+
+  100%{fill:#41C0BF}
+}
+.logo-stroke{
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1100;
+  animation: logo-stroke 10s linear forwards;
+  stroke: #525252;
+  stroke-width: 13.6338;
+  stroke-miterlimit:10;
+  fill: none;
+
+
+}
+.logo-stroke:hover{
+  animati
+}
+
+@keyframes logo-stroke{
+
+
+    to {
+      stroke-dashoffset:50;
+
+    }
+  }
+
+
+.button{
+  display: inline-block;
+}
+.button a{
+  display: inline-block;
+  border:solid #41c0bf 3px;
+  text-decoration: none;
+  padding: 14px 11px ;
+
+  color: #41c0bf;
+  text-align: center;
+  font-size: 15px;
+  font-family: Montserrat;
+  margin-right: 15px;
+}
+.button a:hover{
+  border:solid #41c0bf 3px;
+  background-color: #41c0bf;
+  text-decoration: none;
+  padding: 14px 11px ;
+  color: white;
+
+}
+
+.com{
+  display: inline-block;
+  border:solid #41c0bf 5px;
+  text-decoration: none;
+  padding: 12px 10px ;
+  background-color: #41C0BF;
+
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  font-family: Montserrat;
+  margin-right: 15px;
+}
+.com:hover{
+  opacity: 0.7;
+}
+.illust{
+  float:right;
+  padding-right: 25px;
+  padding-top: 55px;
+}
+.sub {
+
+  font-family:sans-serif;
+  font-size: 20px;
+  padding-top: px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: 300;
+  color:#525252;
+  line-height: 30px;
+  opacity: 0.5;
+
+}

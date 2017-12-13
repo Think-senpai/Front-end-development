@@ -6,6 +6,7 @@
   top:0;
   width:100%;
   height:5px;
+  z-index: 2;
 
 }
 .header-menu {
@@ -17,8 +18,8 @@ padding: 21px;
 }
 
 .header-menu ul {
-margin: 0;
-width:100%;
+  margin-top: 5px;
+
 }
 
 .header-menu li {
@@ -29,114 +30,212 @@ width:100%;
   position: relative;
 
 }
-.bottom-square{
-  width: 700px;
-  height:700px;
-  transform: rotate(45deg);
-  border-radius: 15%;
-  position: fixed;
-  bottom: 0;
-  right: 0;
 
-  background-color: black;
-
-}
 .header-menu a{
   display: inline-block;
   padding: 10px;
   background-color: #41c0bf;
   text-decoration: none;
-  width: 75px;
   color: white;
 
 }
-.left-ghost{
-  position: relative;
-float: left;
- width:15%;
- height:100vh;
+
+
+.backimg{position: relative;
+background-image: url("sky.jpg");
+background-size: cover;
+background-clip:border-box;
+background-position: center;
+background-attachment: fixed;
+display: table;
+width: 100%;
+height: 100vh;
+}
+.wraper{
+  padding-top: 40PX;
+  padding-left: 90px;
+  padding-bottom: 28px;
+  vertical-align:middle;
+  display: table-cell;
+  width: auto;
 
 }
-.left{
-  position:fixed;
-  width:15%;
+.backimg img{
 
-
-  height:100%;
-  background-color: #41c0bf
 
 
 }
-
-.left a{
+.active{
   display: block;
-  background-color: #41C0BF;
   text-decoration: none;
-  color: white;
+  color: #41C0BF;
   cursor: pointer;
-  padding: 20px 5px;
-  margin: 5px 0px;
+  padding: 15px 5px;
+  font-family: sans-serif;
+  font-size: 20px;
+  background-color: white;
+  margin: 20px;
+  margin-right: 0;
 
 }
-.left a:hover{
+
+.passive{
+  display: block;
+  text-decoration: none;
+  color: #41C0BF;
+  cursor: pointer;
+  padding: 15px 5px;
+  font-family: sans-serif;
+  font-size: 20px;
+  background-color: white;
+  margin: 20px;
+  transition-duration: 0.4s;
+
+}
+.passive-m{
+  display: block;
+  text-decoration: none;
+  color: #41C0BF;
+  cursor: pointer;
+  padding: 15px 5px;
+  font-family: sans-serif;
+  font-size: 20px;
+  background-color: white;
+  margin: 20px;
+  transition-duration: 0.4s;
+
+}
+.passive-m:hover{
+
+  color: #41C0BF;
 
   background-color: white;
-  text-decoration: underline;
+  margin-right: 0;
+  fill: lightgreen;
+
+
+
+}
+
+
+.passive:hover{
+
+  background-color: white;
+  margin-right:  0;
   color: #41C0BF;
 
 
+
+}
+.left{
+  position: absolute;
+    z-index: 1;
+    width: 100%;
+
+}
+
+.left li{
+  display: inline-block;
+
 }
 .left ul {
-  margin-top: 50px;
+
   text-align: center;
-    padding: 0;
-    width: 15%;
-    background-color: #41C0BF;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
+  margin-bottom: 0;
+  margin-top: 25px;
+  padding: 0;
+
+}
+
+.left a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 10px;
+  border: solid white 2px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.left a:hover{
+  background-color: white;
+  color: #41C0BF;
+
+}
+
+
+
+.fotter{
+  width: 100%;
+  background-color: grey;
+  padding: 20px;
+
+}
+
+.em-heart{
+  font-size: 12px;
+
+}
+.fotter p {
+  font-family: sans-serif;
+  font-size: 11px;
+  text-align: center;
+  padding: 20px 15px;
+  padding-left: 5px;
+  font-weight:bold;
+  color: white;
+  line-height: 17px;
+  margin: 0;
+  letter-spacing: 2px;
 }
 .main{
 
-  margin-left: 15%;
-
-
-
-
+  height:auto;
 }
-.main h1 {
 
+.wraper h1 {
   font-family: Montserrat;
   font-weight: bold;
-  font-size: 40px;
-  color: #525252;
-  margin-top: 20px;
+  font-size: 30px;
+  color: white;
+  line-height: 40px;
+  margin-top: 15px;
   margin-bottom: 0px;
-
-
-
-
-
 }
 body{
   margin:0;
   padding-top:0px;
-
-
 }
+
 .line{
+position: relative;
+width: 100%;
+padding-left: 100px;
+float: left;
+clear: right;
+margin-bottom: 20px;
 
-  padding-top: 60px;
-  padding-left: 100px;
 }
-/*This is the css for controlling the logo colors*/
-#logo-top{
-  fill: #41c0bf;
-  animation-name: logo-top;
+.left-page{
+  width: 15%
+  float:left;
+}
+/*This is the css for animating the illustration*/
+.eye{
+  animation-name: eye;
   animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+
+
 }
 #logo-bot{
-  fill:#FFFFFF;
+  fill:none;
+  animation:logo-bot;
+  animation-duration: 8s;
+  fill:none;
+  animation-fill-mode: forwards;
+
 }
 #logo-stroke{
   stroke: #525252;
@@ -145,52 +244,88 @@ body{
   fill: none;
   animation-name: logo-stroke;
   animation-duration: 4s;
+
 }
-/*
+
+@keyframes eye{
+    0% {transform:translateX(0px)  }
+    25% {transform: translateX(3.5px) ; }
+    50% {transform: translateX(0px) ;}
+    100% {transform: translateX(-3.5px) ;}
+}
+
+#logo-top{
+  animation:logo-top;
+  animation-duration: 8s;
+  fill:none;
+  animation-fill-mode: forwards;
+
+
+}
+
 @keyframes logo-top {
-    0s {fill: red;}
-      {fill: yellow;left:200px; top:0px;}
-    50%  {fill: blue;}
-    100% {fill: green;}
+  66%{fill:none}
+  67%{fill:#41C0BF}
+
+  100%{fill:#41C0Bf}
 }
+@keyframes logo-bot {
+  66%{fill:none}
+  67%{fill:white}
+
+  100%{fill:white}
+}
+.logo-stroke{
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1100;
+  animation: logo-stroke 10s linear forwards;
+  stroke: #525252;
+  stroke-width: 13.6338;
+  stroke-miterlimit:10;
+  fill: none;
+
+
+}
+.logo-stroke:hover{
+  animati
+}
+
 @keyframes logo-stroke{
 
-  0% {}
-  25%  {}
-  50%  {}
-  100% {}
 
-}
-*/
+    to {
+      stroke-dashoffset:50;
 
-.button{
+    }
+  }
+
+.button {
   display: inline-block;
-}
-.button a{
-  display: inline-block;
-  border:solid #41c0bf 5px;
+  border:solid #41c0bf 3px;
   text-decoration: none;
-  padding: 12px 10px ;
-
-  color: #41c0bf;
+  padding: 14px 11px ;
+  color:white;
   text-align: center;
   font-size: 15px;
   font-family: Montserrat;
   margin-right: 15px;
+  transition-duration: 0.4s;
 }
-.button a:hover{
-  border:solid #41c0bf 5px;
+.button:hover{
+  border:solid #41c0bf 3px;
   background-color: #41c0bf;
   text-decoration: none;
-  padding: 12px 10px ;
+  padding: 14px 11px ;
   color: white;
-}
 
+}
 .com{
   display: inline-block;
   border:solid #41c0bf 5px;
   text-decoration: none;
   padding: 12px 10px ;
+  transition-duration: 0.4s;
+
   background-color: #41C0BF;
 
   color: white;
@@ -203,10 +338,270 @@ body{
   opacity: 0.7;
 }
 .illust{
-  float:right;
-  padding-right: 25px;
-  padding-top: 55px;
+  text-align: center;
+
+  width: 100%;
+  margin: auto;
 }
+
+.social{
+
+height: auto;
+padding: 0px;
+margin-top: 20px;
+margin-bottom: 0px;
+
+
+}
+
+.social li{
+  display: inline-block;
+  list-style-type: none;
+  text-align: center;
+  height: auto;
+}
+
+.social  a {
+ margin-right: 10px;
+ fill: white;
+
+}
+.social a :hover{
+  fill:#41C0BF;
+}
+
+.blue{
+  display:inline-block;
+  width:100%;
+  color: white;
+  background-color: #41C0BF;
+  padding: 30px 90px;
+}
+
+.blue img{
+  display: block;
+  width: 60%;
+  margin: auto;
+}
+
+.blue h1{
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  line-height: 40px;
+  margin-bottom: 0px;
+  text-align: center;
+
+}
+
+.wtspc{
+
+    background-color: white;
+    display: grid;
+    padding-top: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+.air{
+
+    grid-column: 1/4;
+    text-align: center;
+    font-size: 20px;
+    padding: 30px;
+    font-family: moon;
+
+    color: #41C0BF;
+
+}
+
+.air1{
+  width: 100%;
+  object-fit: cover;
+  height: 500px;
+  object-position: top;
+  position: relative;
+}
+.air1 img{
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+  object-position: top;
+}
+.air1 h1{
+  font-size: 45px;
+  padding: 10px 15px;
+  border-bottom: solid 5px #41c0bf;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 0px;
+  color: #525252;
+}
+.air h3{
+  padding-top: 15px;
+  color: #525252;
+  font-size: 15px;
+}
+.air2{
+  width: 100%;
+
+}
+.air2 img{
+
+    width: 100%;
+    object-fit: cover;
+
+    object-position: top;
+    position: relative;
+}
+.air2 h1{
+  font-size: 35px;
+  padding: 10px 15px;
+  border-bottom: solid 5px #41c0bf;
+  background-color: #ffffff;
+  color: #525252;
+
+
+}
+.dream {
+  grid-column: 1/4;
+  line-height: 50px;
+  padding: 35px;
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 55px;
+  border-bottom: solid 1px #d2d2d2;
+}
+.dream p{
+  color: #525252;
+}
+.grd2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* background-color: #41c0bf; */
+  grid-gap: 20px;
+
+  padding-right: 90px;
+  padding-left: 90px;
+}
+.drm{
+  padding-bottom: 30px;
+}
+
+.dream span{
+  color: #41c0bf;
+
+}
+.hum{
+  text-align: center;
+margin-top: 50px;
+font-size: 20px;
+font-family: Montserrat;
+}
+.cls-1{
+  animation: empathy;
+  animation-duration: 5s;
+
+}
+@keyframes empathy {
+
+  5%{fill:red}
+  19%{fill:red}
+  20%{fill:skyblue}
+  34%{fill:skyblue}
+  35%{fill:yellow}
+  49%{fill:yellow}
+  50%{fill:#d2996e}
+  64%{fill:#d2996e}
+  65%{fill:pink}
+  79%{fill:pink}
+  80%{fill:green}
+  94%{fill:green}
+
+
+
+  67%{fill:#41C0BF}
+
+  100%{fill:#41C0Bf}
+}
+
+.grd3{
+  background-color: #41c0bf;
+padding: 20px;
+color: white;
+font-family: Montserrat;
+height: 350px;
+}
+.com1{
+  padding: 20px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  text-align: center;
+  border: solid 5px #41c0bf;
+  position: relative;
+
+}
+.agcy{
+  padding: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  border: solid 5px #41c0bf;
+  position: relative;
+
+}
+
+.bod{
+  display: grid;
+  position: relative;
+  margin: auto;
+
+}
+.bod img{
+
+  object-fit: cover;
+  height: 500px;
+  filter: brightness(60%);
+}
+.bod h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: Montserrat;
+  WIDTH: fit-content;
+  text-align: center;
+}
+
+.story{
+  background-color: white;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 70px;
+  margin-bottom:  70px;
+}
+.story img{
+height: auto;
+object-fit: cover;
+}
+.storyp {
+  width: 30%;
+  height:100%;
+  background-color: #ee7ac0;
+
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+     margin: 0;
+     outline: 0;
+     box-sizing: border-box;
+}
+
 .sub {
 
   font-family:sans-serif;
@@ -215,8 +610,231 @@ body{
   margin-top: 10px;
   margin-bottom: 15px;
   font-weight: 300;
-  color:#525252;
+  color:white;
   line-height: 30px;
-  opacity: 0.5;
+  opacity: 0.8;
 
 }
+@media only screen and (max-width:1050px){
+.main{
+  margin:0px;
+}
+  .illust{
+  text-align: center;
+  margin:auto;
+  padding-top: 50px;
+
+  }
+
+  .dev{
+    max-width: 200px;
+    height: auto;
+  }
+  .line, .sub, .bottn, .illust, .left ul, .left, .hed{
+    width: 100%;
+    float: none;
+    overflow: auto;
+    ;
+  }
+.fotter{
+  position:relative;
+  margin: auto;
+  background-color: grey;
+  width: 100%;
+  bottom: 0px;
+  height: auto;
+  padding: 25px 15px;
+}
+* {
+    box-sizing: border-box;
+}
+.left ul {
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+.bottn{
+  margin-bottom: 10px;
+}
+.line{
+  padding-top:150px;
+  padding-left: 90px;
+  padding-right: 90px
+}
+}
+@media only screen and (max-width:600px){
+
+  .main{
+    margin:0px;
+  }
+    .illust{
+    text-align: center;
+    margin:auto;
+    padding-top: 50px;
+
+    }
+
+    .dev{
+      max-width: 200px;
+      height: auto;
+    }
+    .line, .sub, .bottn, .illust, .left ul, .left, .hed{
+      width: 100%;
+      float: none;
+      overflow: auto;
+
+    }
+
+  .fotter{
+    position:relative;
+    margin: auto;
+    background-color: grey;
+    width: 100%;
+    bottom: 0px;
+    height: auto;
+    padding: 25px 15px;
+  }
+  * {
+      box-sizing: border-box;
+  }
+  .left ul {
+      position: absolute;
+      display: none;
+      z-index: 1;
+  }
+  .bottn{
+    margin-bottom: 10px;
+  }
+  .line{
+    padding-top:150px;
+    padding-left: 20px;
+    padding-right: 20px
+  }
+  h1.hed{
+    font-size: 30px;
+  }
+  p.sub{
+    font-size:  15px;
+  }
+  }
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+
+  * {
+  	margin:0;
+  	padding:0;
+  	box-sizing:border-box;
+  	-webkit-box-sizing:border-box;
+  	-moz-box-sizing:border-box;
+  	-webkit-font-smoothing:antialiased;
+  	-moz-font-smoothing:antialiased;
+  	-o-font-smoothing:antialiased;
+  	font-smoothing:antialiased;
+  	text-rendering:optimizeLegibility;
+  }
+
+
+
+  .error {
+      color: red;
+  }
+
+  .success {
+      color: #ff9966;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+  }
+
+  .container {
+  	max-width:400px;
+  	width:100%;
+  	margin:0 auto;
+  	position:relative;
+  }
+
+  #contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+  #contact {
+  	background:#F9F9F9;
+  	padding:25px;
+  	margin:50px 0;
+  }
+
+  #contact h3 {
+  	color: #F96;
+  	display: block;
+  	font-size: 30px;
+  	font-weight: 400;
+  }
+
+  #contact h4 {
+  	margin:5px 0 15px;
+  	display:block;
+  	font-size:13px;
+  }
+
+  fieldset {
+  	border: medium none !important;
+  	margin: 0 0 10px;
+  	min-width: 100%;
+  	padding: 0;
+  	width: 100%;
+  }
+
+  #contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+  	width:100%;
+  	border:1px solid #CCC;
+  	background:#FFF;
+  	margin:0 0 5px;
+  	padding:10px;
+  }
+
+  #contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+  	-webkit-transition:border-color 0.3s ease-in-out;
+  	-moz-transition:border-color 0.3s ease-in-out;
+  	transition:border-color 0.3s ease-in-out;
+  	border:1px solid #AAA;
+  }
+
+  #contact textarea {
+  	height:100px;
+  	max-width:100%;
+    resize:none;
+  }
+
+  #contact button[type="submit"] {
+  	cursor:pointer;
+  	width:100%;
+  	border:none;
+  	background:#0CF;
+  	color:#FFF;
+  	margin:0 0 5px;
+  	padding:10px;
+  	font-size:15px;
+  }
+
+  #contact button[type="submit"]:hover {
+  	background:#09C;
+  	-webkit-transition:background 0.3s ease-in-out;
+  	-moz-transition:background 0.3s ease-in-out;
+  	transition:background-color 0.3s ease-in-out;
+  }
+
+  #contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+  #contact input:focus, #contact textarea:focus {
+  	outline:0;
+  	border:1px solid #999;
+  }
+  ::-webkit-input-placeholder {
+   color:#888;
+  }
+  :-moz-placeholder {
+   color:#888;
+  }
+  ::-moz-placeholder {
+   color:#888;
+  }
+  :-ms-input-placeholder {
+   color:#888;
+  }
